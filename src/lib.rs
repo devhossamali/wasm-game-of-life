@@ -19,10 +19,12 @@ pub fn greet() {
 }
 
 #[wasm_bindgen]
-pub fn get_total(number: u32) -> u32 {
+pub fn get_total(number1: u32, number2: u32) -> u32 {
     let mut total = 0;
-    for i in 0..number {
-        total += i;
+    for _ in 0..number1 {
+        for j in 0..number2 {
+            total += j;
+        }
     }
     return total;
 }
